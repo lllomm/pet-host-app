@@ -1,0 +1,134 @@
+.footer {
+  background-color: var(--bg-light);
+  border-top: 1px solid var(--border);
+  padding: 64px 0 32px;
+  margin-top: 64px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 64px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.brandDesc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-medium);
+}
+
+.social {
+  display: flex;
+  gap: 16px;
+  color: var(--text-dark);
+}
+
+.social a {
+  color: inherit;
+  transition: opacity 0.2s;
+}
+
+.social a:hover {
+  opacity: 0.7;
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linkList a {
+  font-size: 14px;
+  color: var(--text-medium);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.linkList a:hover {
+  color: var(--text-dark);
+  text-decoration: underline;
+}
+
+.bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-medium);
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 24px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+@media (max-width: 1024px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .linksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .linksGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bottom {
+    flex-direction: column-reverse;
+    gap: 24px;
+    align-items: flex-start;
+  }
+}

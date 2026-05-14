@@ -1,0 +1,416 @@
+.main {
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  padding: 40px 20px 80px;
+}
+
+/* Stepper */
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  flex: 1;
+}
+
+.stepIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.stepTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.stepLine {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--border);
+  z-index: 1;
+}
+
+.active .stepIcon {
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.1);
+}
+
+.active .stepTitle {
+  color: var(--primary);
+}
+
+.completed .stepIcon {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.completed .stepTitle {
+  color: var(--primary);
+}
+
+.completed .stepLine {
+  background-color: var(--primary);
+}
+
+/* Card */
+.card {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 48px;
+}
+
+.formSection h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.sectionHeader {
+  margin-bottom: 32px;
+}
+
+.sectionHeader p {
+  color: var(--text-medium);
+  font-size: 15px;
+}
+
+/* Form Layout */
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroupFull {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.inputGroupFull label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.inputGroup input,
+.inputGroupFull input,
+.select,
+.inputGroupFull textarea {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  transition: border-color 0.2s;
+}
+
+.inputGroup input:focus,
+.inputGroupFull input:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.addressRow {
+  display: flex;
+  gap: 12px;
+}
+
+.zipInput {
+  flex: 1;
+}
+
+.zipButton {
+  padding: 0 20px;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mt12 {
+  margin-top: 12px;
+}
+
+/* Step 2: ID Verification */
+.idSelection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.idOption input {
+  display: none;
+}
+
+.idCard {
+  padding: 20px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.idOption input:checked + .idCard {
+  border-color: var(--primary);
+  background-color: rgba(var(--primary-rgb), 0.05);
+}
+
+.idName {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.uploadArea {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.uploadBox {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-md);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background-color: #fafafa;
+}
+
+.uploadBox p {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-medium);
+}
+
+.uploadBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.infoBox {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background-color: #f0f9ff;
+  border-radius: var(--radius-md);
+  color: #0369a1;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Step 3: Dog Info */
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.miniUpload {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-medium);
+  font-size: 14px;
+  cursor: pointer;
+  background-color: var(--bg-light);
+}
+
+/* Step 5: Success */
+.successSection {
+  text-align: center;
+}
+
+.successCelebration {
+  margin-bottom: 24px;
+}
+
+.nextSteps {
+  margin: 40px 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nextSteps h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.stepCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.stepNum {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.finishBtn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+/* Actions */
+.actions {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.backBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.nextBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 32px;
+  background-color: var(--text-dark);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.nextBtn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 24px;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .inputGroupFull {
+    grid-column: span 1;
+  }
+  
+  .idSelection {
+    grid-template-columns: 1fr;
+  }
+  
+  .uploadArea {
+    grid-template-columns: 1fr;
+  }
+  
+  .stepper {
+    display: none;
+  }
+}

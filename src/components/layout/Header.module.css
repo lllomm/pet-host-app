@@ -1,0 +1,352 @@
+.header {
+  height: var(--header-height);
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.searchBar {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  background-color: var(--bg-white);
+  position: relative;
+}
+
+.searchBarActive {
+  background-color: #ebebeb;
+  box-shadow: var(--shadow-md);
+}
+
+.searchSegments {
+  display: flex;
+  align-items: center;
+}
+
+.segment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 24px;
+  border-radius: var(--radius-full);
+  transition: background-color 0.2s ease;
+  flex: 1;
+}
+
+.segment:hover {
+  background-color: var(--bg-light);
+}
+
+.segmentActive {
+  background-color: var(--bg-white) !important;
+  box-shadow: var(--shadow-md);
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.value {
+  font-size: 14px;
+  color: var(--text-medium);
+  white-space: nowrap;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--border);
+}
+
+.searchIconButton {
+  background-color: var(--primary);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.searchIconButton:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  width: 100%;
+  min-width: 400px;
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 24px;
+  z-index: 1000;
+  border: 1px solid var(--border);
+}
+
+.dropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dropdownHeader h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.prefectureGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.prefectureItem {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.prefectureItem:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+}
+
+.prefectureItem.selected {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.calendarPlaceholder {
+  padding: 20px;
+  text-align: center;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.calendarDay {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.calendarDay:hover {
+  background-color: var(--bg-light);
+}
+
+.calendarNote {
+  font-size: 12px;
+  color: var(--text-medium);
+}
+
+.dogsDropdown {
+  width: 350px;
+  min-width: auto;
+  right: 0;
+  left: auto;
+}
+
+.counterList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.counterItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.counterName {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.counterDesc {
+  font-size: 13px;
+  color: var(--text-medium);
+}
+
+.counterControls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.counterControls button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s;
+}
+
+.counterControls button:hover {
+  border-color: var(--text-dark);
+}
+
+.counterControls span {
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 20px;
+  text-align: center;
+}
+
+.dropdownFooter {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.confirmButton {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.confirmButton:hover {
+  background-color: var(--primary-hover);
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hostButton {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: var(--radius-full);
+  transition: background-color 0.2s ease;
+}
+
+.hostButton:hover {
+  background-color: var(--bg-light);
+}
+
+.profileMenu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 5px 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  transition: box-shadow 0.2s ease;
+}
+
+.profileMenu:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.avatar {
+  background-color: var(--text-light);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registerLink {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: var(--radius-full);
+  transition: background-color 0.2s ease;
+}
+
+.registerLink:hover {
+  background-color: var(--bg-light);
+}
+
+@media (max-width: 1024px) {
+  .segment {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchBar {
+    margin: 0 12px;
+  }
+  .label {
+    display: none;
+  }
+  .divider {
+    display: none;
+  }
+  .segment {
+    padding: 8px 12px;
+  }
+  .value {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dark);
+  }
+  .searchIconButton {
+    width: 36px;
+    height: 36px;
+  }
+  .hostButton, .registerLink {
+    display: none;
+  }
+}

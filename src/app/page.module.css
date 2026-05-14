@@ -1,0 +1,103 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.todaySection {
+  padding-top: 40px;
+  padding-bottom: 24px;
+}
+
+.listingsSection {
+  padding-top: 24px;
+  padding-bottom: 80px;
+  flex: 1;
+}
+
+.sectionHeader {
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.sectionSubtitle {
+  font-size: 16px;
+  color: var(--text-light);
+}
+
+.horizontalScroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.horizontalScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollItem {
+  flex: 0 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px 24px;
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  background-color: var(--bg-white);
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.footerLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.footerLinks span {
+  cursor: pointer;
+}
+
+.footerLinks span:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .scrollItem {
+    /* width is controlled by ListingCard.small */
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 32px 16px;
+  }
+  
+  .footerContent {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

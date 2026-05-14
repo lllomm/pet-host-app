@@ -1,0 +1,392 @@
+.widget {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--bg-white);
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 24px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.unit {
+  font-size: 16px;
+  color: var(--text-medium);
+  margin-left: 4px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.ratingValue {
+  font-weight: 600;
+}
+
+.reviews {
+  color: var(--text-medium);
+}
+
+.form {
+  border: 1px solid var(--text-light);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.datePicker {
+  display: flex;
+  border-bottom: 1px solid var(--text-light);
+}
+
+.checkIn, .checkOut {
+  flex: 1;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkIn {
+  border-right: 1px solid var(--text-light);
+}
+
+.guests {
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.value {
+  font-size: 14px;
+  color: var(--text-medium);
+}
+
+.reserveButton {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, var(--primary), var(--primary-hover));
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  transition: opacity 0.2s ease;
+}
+
+.reserveButton:hover {
+  opacity: 0.9;
+}
+
+.finePrint {
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-medium);
+  margin-bottom: 24px;
+}
+
+.calc {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.calcRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: var(--text-dark);
+}
+
+.divider {
+  margin: 24px 0;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+.total {
+  font-weight: 700;
+}
+
+/* Calendar Styles */
+.calendarContainer {
+  margin-bottom: 24px;
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.navButton {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-dark);
+  transition: background-color 0.2s;
+}
+
+.navButton:hover {
+  background-color: var(--bg-gray);
+}
+
+.currentMonth {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  background-color: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dayHeader {
+  background-color: var(--bg-gray);
+  padding: 8px 0;
+  text-align: center;
+  font-size: 10px;
+  color: var(--text-medium);
+  font-weight: bold;
+}
+
+.dayHeader.sat { color: #3b82f6; }
+.dayHeader.sun { color: #ef4444; }
+
+.calendarCell {
+  background-color: var(--bg-white);
+  padding: 8px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-height: 60px;
+}
+
+.calendarCell.empty {
+  background-color: #f9fafb;
+}
+
+.dateNum {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.statusIcon {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.statusIcon.available {
+  color: #10b981;
+}
+
+.statusIcon.available:hover {
+  background-color: #d1fae5;
+}
+
+.statusIcon.few {
+  color: #f59e0b;
+}
+
+.statusIcon.few:hover {
+  background-color: #fef3c7;
+}
+
+.statusIcon.full {
+  color: var(--text-light);
+  cursor: not-allowed;
+}
+
+.statusIcon.selected {
+  background-color: var(--primary);
+  color: white;
+}
+.statusIcon.selected:hover {
+  background-color: var(--primary-hover);
+}
+
+.selectionInfo {
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: var(--bg-gray);
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selectionLabel {
+  color: var(--text-medium);
+}
+
+.selectionValue {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Menu Tabs and Time Input */
+.menuTabs {
+  display: flex;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab {
+  flex: 1;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-medium);
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  background-color: var(--bg-gray);
+}
+
+.tab.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+.timeInput {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: var(--bg-gray);
+  border-radius: 8px;
+}
+
+.timeLabel {
+  font-size: 14px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inputField {
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  width: 70px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Time Slot Grid */
+.timeSlotSection {
+  margin-bottom: 24px;
+}
+
+.timeSlotGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.timeChip {
+  padding: 8px 4px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: var(--bg-white);
+}
+
+.timeChip:hover:not(.disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.timeChip.selected {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.timeChip.inRange {
+  background-color: rgba(var(--primary-rgb), 0.1);
+  border-color: var(--primary);
+}
+
+.timeChip.disabled {
+  background-color: var(--bg-gray);
+  color: var(--text-light);
+  cursor: not-allowed;
+  border-color: var(--border);
+}
+
+.timeSlotHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.timeSlotTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.timeRangeSummary {
+  font-size: 13px;
+  color: var(--primary);
+  font-weight: 600;
+}
