@@ -1,0 +1,103 @@
+.main {
+  padding-top: var(--header-height);
+  min-height: 100vh;
+  background-color: var(--bg-white);
+}
+
+.header {
+  padding: 60px 0 40px;
+  background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.lastUpdated {
+  font-size: 14px;
+  color: var(--text-medium);
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+.intro {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 48px;
+}
+
+.article {
+  margin-bottom: 48px;
+}
+
+.article h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-left: 12px;
+  border-left: 4px solid var(--primary);
+  color: var(--text-dark);
+}
+
+.article p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-medium);
+  margin-bottom: 16px;
+}
+
+.clauseList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.clauseList li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-medium);
+  margin-bottom: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.clauseNumber {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.subList {
+  list-style: none;
+  padding-left: 28px;
+  margin-top: 8px;
+}
+
+.subList li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.footerNote {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-medium);
+}
+
+@media (max-width: 640px) {
+  .title { font-size: 24px; }
+  .content { padding: 40px 20px; }
+  .article h2 { font-size: 18px; }
+}
