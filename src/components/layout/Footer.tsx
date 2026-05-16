@@ -20,7 +20,7 @@ const footerSections = [
       { label: 'ホストを探す', href: '#' },
       { label: '利用の流れ', href: '/how-it-works' },
       { label: '料金プラン', href: '#' },
-      { label: 'よくある質問', href: '#' },
+      { label: 'よくある質問', href: '/faq' },
       { label: '宿泊レビュー', href: '#' },
     ]
   },
@@ -30,7 +30,7 @@ const footerSections = [
       { label: 'ホストになる', href: '#' },
       { label: 'ホストのメリット', href: '#' },
       { label: 'ホストコミュニティ', href: '#' },
-      { label: 'ホスト向けFAQ', href: '#' },
+      { label: 'ホスト向けFAQ', href: '/faq' },
     ]
   },
   {
