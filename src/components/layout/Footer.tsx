@@ -18,7 +18,7 @@ const footerSections = [
     title: '飼い主様向け',
     links: [
       { label: 'ホストを探す', href: '#' },
-      { label: '利用の流れ', href: '#' },
+      { label: '利用の流れ', href: '/how-it-works' },
       { label: '料金プラン', href: '#' },
       { label: 'よくある質問', href: '#' },
       { label: '宿泊レビュー', href: '#' },
