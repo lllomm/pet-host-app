@@ -8,7 +8,7 @@ const footerSections = [
     title: 'PawBnBについて',
     links: [
       { label: 'PawBnBとは', href: '/about' },
-      { label: '安心・安全への取り組み', href: '#' },
+      { label: '安心・安全への取り組み', href: '/safety' },
       { label: '運営会社', href: '#' },
       { label: '採用情報', href: '#' },
       { label: 'ニュース', href: '#' },

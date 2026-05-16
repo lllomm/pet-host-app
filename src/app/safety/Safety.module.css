@@ -1,0 +1,158 @@
+.main {
+  padding-top: var(--header-height);
+  min-height: 100vh;
+  background-color: var(--bg-white);
+}
+
+.hero {
+  padding: 100px 0 60px;
+  background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: #ccfbf1;
+  color: #0f766e;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--text-medium);
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.pillarGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.pillarCard {
+  background: white;
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.3s ease;
+}
+
+.pillarCard:hover {
+  transform: translateY(-5px);
+}
+
+.iconWrapper {
+  width: 56px;
+  height: 56px;
+  background-color: #f0fdfa;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0d9488;
+  margin-bottom: 24px;
+}
+
+.pillarCard h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-dark);
+}
+
+.pillarCard p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-medium);
+}
+
+.supportSection {
+  background-color: #f8fafc;
+}
+
+.infoBox {
+  background: white;
+  padding: 48px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.infoText h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.infoText p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-medium);
+  margin-bottom: 16px;
+}
+
+.checkList {
+  list-style: none;
+  margin-top: 24px;
+}
+
+.checkList li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.cta {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.ctaButton:hover {
+  background-color: var(--primary-hover);
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 32px; }
+  .pillarGrid { grid-template-columns: 1fr; }
+  .infoBox { flex-direction: column; padding: 32px; }
+}
