@@ -1,0 +1,95 @@
+.main {
+  padding-top: var(--header-height);
+  min-height: 100vh;
+  background-color: var(--bg-white);
+}
+
+.header {
+  padding: 60px 0 40px;
+  background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.lastUpdated {
+  font-size: 14px;
+  color: var(--text-medium);
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+.intro {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 48px;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.legalTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.legalTable th,
+.legalTable td {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.legalTable tr:last-child th,
+.legalTable tr:last-child td {
+  border-bottom: none;
+}
+
+.legalTable th {
+  background-color: var(--bg-light);
+  width: 30%;
+  font-weight: 600;
+  color: var(--text-dark);
+  border-right: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.legalTable td {
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+}
+
+@media (max-width: 640px) {
+  .title { font-size: 24px; }
+  .content { padding: 40px 20px; }
+  .legalTable th,
+  .legalTable td {
+    display: block;
+    width: 100%;
+    border-right: none;
+  }
+  .legalTable th {
+    border-bottom: none;
+    padding-bottom: 8px;
+  }
+  .legalTable td {
+    padding-top: 0;
+  }
+}
