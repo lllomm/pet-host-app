@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight, Moon, Sun } from 'lucide-react';
 import styles from './BookingWidget.module.css';
 
 interface BookingWidgetProps {
@@ -33,7 +33,7 @@ const BookingWidget: React.FC<BookingWidgetProps> = ({ price, rating }) => {
   // Use May 2026 as current display mock since context suggests 2026-05
   const [currentMonth, setCurrentMonth] = useState(new Date(2026, 4, 1)); // May 1, 2026
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-  const [bookingType, setBookingType] = useState<'stay' | 'daycare'>('stay');
+  const [bookingType, setBookingType] = useState<'stay' | 'daycare' | null>(null);
   const [startTime, setStartTime] = useState<number | null>(null);
   const [endTime, setEndTime] = useState<number | null>(null);
 
@@ -66,11 +66,11 @@ const BookingWidget: React.FC<BookingWidgetProps> = ({ price, rating }) => {
   };
 
   const daycarePricePerHour = Math.round(price * 0.2);
-  const currentPrice = bookingType === 'stay' ? price : daycarePricePerHour;
-  const unit = bookingType === 'stay' ? '泊' : '時間';
+  const currentPrice = bookingType === 'daycare' ? daycarePricePerHour : price;
+  const unit = bookingType === 'daycare' ? '時間' : '泊';
   
   const hours = (startTime !== null && endTime !== null) ? (endTime - startTime) : 0;
-  const quantity = bookingType === 'stay' ? (selectedDate ? 1 : 0) : hours;
+  const quantity = bookingType === 'stay' ? (selectedDate ? 1 : 0) : (bookingType === 'daycare' ? hours : 0);
   const subtotal = currentPrice * quantity;
   
   // Generate calendar grid
@@ -100,25 +100,16 @@ const BookingWidget: React.FC<BookingWidgetProps> = ({ price, rating }) => {
 
   return (
     <div className={styles.widget}>
-      <div className={styles.menuTabs}>
-        <div 
-          className={`${styles.tab} ${bookingType === 'stay' ? styles.active : ''}`}
-          onClick={() => setBookingType('stay')}
-        >
-          宿泊
-        </div>
-        <div 
-          className={`${styles.tab} ${bookingType === 'daycare' ? styles.active : ''}`}
-          onClick={() => setBookingType('daycare')}
-        >
-          一時預かり
-        </div>
-      </div>
-
       <div className={styles.header}>
         <div className={styles.priceRow}>
-          <span className={styles.price}>¥{currentPrice.toLocaleString()}</span>
-          <span className={styles.unit}>{unit}</span>
+          {bookingType ? (
+            <>
+              <span className={styles.price}>¥{currentPrice.toLocaleString()}</span>
+              <span className={styles.unit}>{unit}</span>
+            </>
+          ) : (
+            <span className={styles.price}>¥{price.toLocaleString()}〜</span>
+          )}
         </div>
         <div className={styles.rating}>
           <Star size={12} fill="currentColor" />
@@ -126,6 +117,26 @@ const BookingWidget: React.FC<BookingWidgetProps> = ({ price, rating }) => {
           <span className={styles.reviews}>· 12 件のレビュー</span>
         </div>
       </div>
+
+      <div className={styles.typeSelection}>
+        <div 
+          className={`${styles.typeButton} ${bookingType === 'stay' ? styles.active : ''}`}
+          onClick={() => { setBookingType('stay'); setSelectedDate(null); setStartTime(null); setEndTime(null); }}
+        >
+          <Moon size={24} className={styles.typeIcon} />
+          <span>宿泊</span>
+        </div>
+        <div 
+          className={`${styles.typeButton} ${bookingType === 'daycare' ? styles.active : ''}`}
+          onClick={() => { setBookingType('daycare'); setSelectedDate(null); setStartTime(null); setEndTime(null); }}
+        >
+          <Sun size={24} className={styles.typeIcon} />
+          <span>一時預かり</span>
+        </div>
+      </div>
+
+      {bookingType && (
+        <>
 
       <div className={styles.calendarContainer}>
         <div className={styles.calendarHeader}>
@@ -244,6 +255,7 @@ const BookingWidget: React.FC<BookingWidgetProps> = ({ price, rating }) => {
             <span>合計</span>
             <span>¥{(subtotal + 3500).toLocaleString()}</span>
           </div>
+        </>
         </>
       )}
     </div>

@@ -268,31 +268,44 @@
   color: var(--primary);
 }
 
-/* Menu Tabs and Time Input */
-.menuTabs {
+/* Type Selection Buttons */
+.typeSelection {
   display: flex;
+  gap: 12px;
   margin-bottom: 24px;
-  border-bottom: 1px solid var(--border);
 }
 
-.tab {
+.typeButton {
   flex: 1;
-  padding: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--bg-white);
   text-align: center;
   cursor: pointer;
-  font-size: 14px;
   font-weight: 600;
-  color: var(--text-medium);
+  color: var(--text-dark);
   transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
 }
 
-.tab:hover {
+.typeButton:hover {
+  border-color: var(--primary);
   background-color: var(--bg-gray);
 }
 
-.tab.active {
+.typeButton.active {
+  border-color: var(--primary);
+  background-color: rgba(var(--primary-rgb), 0.05);
   color: var(--primary);
-  border-bottom: 2px solid var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+.typeIcon {
+  color: inherit;
 }
 
 .timeInput {
