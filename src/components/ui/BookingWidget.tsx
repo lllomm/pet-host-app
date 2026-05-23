@@ -256,6 +256,7 @@ const BookingWidget: React.FC<BookingWidgetProps> = ({ price, rating }) => {
             <span>¥{(subtotal + 3500).toLocaleString()}</span>
           </div>
         </>
+      )}
         </>
       )}
     </div>
