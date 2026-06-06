@@ -19,7 +19,7 @@ export default function RegisterPage() {
     e.preventDefault();
     if (agreed && email && password && phone) {
       // PDFの仕様に則り、SMS認証画面（未実装）またはオンボーディングへ進む
-      window.location.href = '/register/onboarding'; // 仮の遷移先
+      window.location.href = '/verification'; // 仮の遷移先
     }
   };
 
