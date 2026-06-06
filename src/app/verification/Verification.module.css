@@ -1,0 +1,536 @@
+.main {
+  padding-top: var(--header-height);
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: var(--font-main);
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+}
+
+/* Progress Bar */
+.progressSection {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 32px 40px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.stepTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.stepLine {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #e5e7eb;
+  z-index: 0;
+}
+
+.stepLineFill {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 20%;
+  height: 4px;
+  background-color: #8cc63f; /* DogHuggy brand green */
+  z-index: 0;
+}
+
+.stepNode {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  border: 4px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepCircleActive {
+  background-color: #8cc63f;
+}
+
+.stepLabel {
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.stepLabelActive {
+  color: #333;
+}
+
+/* Header */
+.pageHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pageTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Steps Info Cards */
+.stepsInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.infoCard {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.infoNumber {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #dcfce7;
+  color: #166534;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.infoIcon {
+  color: #8cc63f;
+  margin-right: 8px;
+}
+
+.infoText h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.infoText p {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Input Cards */
+.formCard {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #8cc63f;
+}
+
+.cardHeader h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.nameInputs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.inputGroup {
+  flex: 1;
+}
+
+.inputLabel {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.textInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.textInput:focus {
+  border-color: #8cc63f;
+}
+
+.inputNote {
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ID Selection */
+.idInstruction {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.idButtonsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.idSelectBtn {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.2s;
+}
+
+.idSelectBtn:hover {
+  border-color: #8cc63f;
+  background: #f0fdf4;
+}
+
+.idSelectBtnActive {
+  border-color: #8cc63f;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.idRulesBox {
+  background: #f9f9f9;
+  border-left: 4px solid #8cc63f;
+  padding: 16px 20px;
+  margin-bottom: 32px;
+  border-radius: 4px;
+}
+
+.idRulesBox p {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.idRulesList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.idRulesList li {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.idRulesList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #666;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.submitBtnDisabled {
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.submitBtnActive {
+  background-color: #8cc63f;
+  color: white;
+  cursor: pointer;
+}
+
+.submitBtnActive:hover {
+  background-color: #7ab332;
+}
+
+.fileFormats {
+  text-align: center;
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 12px;
+}
+
+/* FAQ Section */
+.faqSection {
+  margin-top: 60px;
+}
+
+.faqHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqItem {
+  background: white;
+  border-radius: 6px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.faqQuestion {
+  width: 100%;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.faqIcon {
+  color: #8cc63f;
+  transition: transform 0.3s;
+}
+
+.faqIconOpen {
+  transform: rotate(45deg);
+}
+
+.faqAnswer {
+  padding: 0 24px 24px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.modalHeader {
+  background-color: #8cc63f;
+  color: white;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.modalCloseBtn {
+  position: absolute;
+  right: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modalBody {
+  padding: 40px;
+  text-align: center;
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.modalSubtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.modalOptionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.modalOptionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-weight: 700;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.modalOptionBtn:hover {
+  border-color: #8cc63f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.modalOptionIcon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Completion Screen */
+.successIcon {
+  width: 80px;
+  height: 80px;
+  background-color: #8cc63f;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.statusCard {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.statusIcon {
+  color: #f59e0b;
+}
+
+.statusText h4 {
+  color: #f59e0b;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.statusText p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .nameInputs { flex-direction: column; }
+  .idButtonsGrid { grid-template-columns: 1fr; }
+  .modalOptionsGrid { grid-template-columns: 1fr; }
+  .modalBody { padding: 24px; }
+  .statusCard { flex-direction: column; text-align: center; }
+}
