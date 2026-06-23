@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Star, ChevronLeft, ChevronRight, Moon, Sun } from 'lucide-react';
 import styles from './BookingWidget.module.css';
 
@@ -30,6 +31,7 @@ const getStatusIcon = (status: string) => {
 const dayNames = ['日', '月', '火', '水', '木', '金', '土'];
 
 const BookingWidget: React.FC<BookingWidgetProps> = ({ price, rating }) => {
+  const router = useRouter();
   // Use May 2026 as current display mock since context suggests 2026-05
   const [currentMonth, setCurrentMonth] = useState(new Date(2026, 4, 1)); // May 1, 2026
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
@@ -226,6 +228,7 @@ const BookingWidget: React.FC<BookingWidgetProps> = ({ price, rating }) => {
           cursor: (selectedDate && (bookingType === 'stay' || (startTime !== null && endTime !== null))) ? 'pointer' : 'not-allowed' 
         }}
         disabled={!(selectedDate && (bookingType === 'stay' || (startTime !== null && endTime !== null)))}
+        onClick={() => router.push('/checkout')}
       >
         予約する
       </button>
