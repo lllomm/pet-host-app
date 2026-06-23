@@ -60,8 +60,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             予約・トラブル管理
           </Link>
           <Link 
-            href="#" 
-            className={styles.navItem}
+            href="/admin/listings" 
+            className={`${styles.navItem} ${isActive('/admin/listings') ? styles.navItemActive : ''}`}
           >
             <ShieldAlert size={20} />
             リスティング監視
@@ -69,8 +69,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
           <p className={styles.navSection}>システム設定</p>
           <Link 
-            href="#" 
-            className={styles.navItem}
+            href="/admin/cms" 
+            className={`${styles.navItem} ${isActive('/admin/cms') ? styles.navItemActive : ''}`}
           >
             <FileText size={20} />
             お知らせ・CMS
